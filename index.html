@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok YTTA</title>
+
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #222;
+            --card-bg: white;
+            --card-shadow: rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark {
+            --bg-color: #0f172a;
+            --text-color: #ffffff;
+            --card-bg: #1e293b;
+            --card-shadow: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            transition: 0.3s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.7;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background: var(--card-bg);
+            color: var(--text-color);
+            border: none;
+            padding: 12px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px var(--card-shadow);
+            transition: 0.3s;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            color: var(--text-color);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px var(--card-shadow);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 18px var(--card-shadow);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #fff5;
+        }
+
+        .name {
+            font-size: 22px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .role {
+            opacity: 0.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+    <header>
+        <h1>Kelompok Kontrakan</h1>
+        <p>Selamat datang di halaman resmi kelompok kontrakan</p>
+    </header>
+
+    <div class="container">
+
+        
+        <div class="card">
+            <img src="https://www.paramountshop.com/cdn/shop/files/spongebob-squarepants-life-sized-cardboard-cutout-standee-946804_1445x.jpg?v=1718292085" class="avatar">
+            <div class="name">Rakha Damajati</div>
+            <div class="role">5241011036</div>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Patrick_Star_character.png" class="avatar">
+            <div class="name">Arielyan Sultan Phasay</div>
+            <div class="role">5241011015</div>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLrakeVY6NTxegMyFJH-f05nbIjTVEiDAWWA&s" class="avatar">
+            <div class="name">Hanif Khoirullah</div>
+            <div class="role">5241011033</div>
+        </div>
+
+        <div class="card">
+            <img src="https://static.wikia.nocookie.net/spongebob/images/0/0e/Squidward_Tentacles_stock_art.png/revision/latest/smart/width/250/height/250?cb=20181202213154&path-prefix=id" class="avatar">
+            <div class="name">Jonatan Farel Pratama</div>
+            <div class="role">5241011024</div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; dibuat dengan kelompok kontrakan - 2025
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+            const btn = document.querySelector(".theme-toggle");
+
+            if (document.body.classList.contains("dark")) {
+                btn.textContent = "☀️ Light Mode";
+            } else {
+                btn.textContent = "🌙 Dark Mode";
+            }
+        }
+    </script>
+
+</body>
+</html>
